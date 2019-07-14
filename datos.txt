@@ -1,0 +1,7 @@
+Nombre : Dorex Suave
+Descripcion : Disminucion del dolor de muelas en segundos.
+Contradicciones : Mejor no consumir, solo duerma o tomese un te.
+Precio : 6999.99
+Grupos : Tabletas,Dientes,Paracetamol,farmaco.
+Requiere formulacion : si.
+Existencias : 15

@@ -15,8 +15,7 @@ def menuInicial():
 def menuAgregar():
     print("MENU AGREGAR PRODUCTOS\n") 
     print("1 Agregar nuevo producto")
-    print("2 Agregar existencias")
-    print("3 para volver al menu anterior")
+    print("2 para volver al menu anterior")
     num = int(input())
     return num
 
@@ -38,3 +37,13 @@ def menuConsularExistencias():
     print("3 para volver al menu anterior")
     num = int(input())
     return num
+
+def menuEditarProductos():
+    print("MENU EDITAR PRODUCTOS")
+    print("1 Agregar existencias")
+    print("2 Disminuir existencias")
+    print("3 Editar informacion")
+    print("4 para volver al menu anterior")
+    num = int(input())
+    return num
+    

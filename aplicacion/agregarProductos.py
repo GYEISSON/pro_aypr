@@ -20,7 +20,7 @@ def agregarNuevoProducto(inventario):
     return inventario
 
 def agregarProductoExistente(inventario):
-    print("Agregar Producto Existente")
+    print("Agregar Existencias")
     codigo = input("codigo : ")
     pos = buscarProductoCodigo(inventario,codigo)
     if(pos!=-1):
@@ -28,4 +28,18 @@ def agregarProductoExistente(inventario):
         inventario[pos][-1] = str(int(inventario[pos][-1])+int(existencias))
     else:
         print("El Producto no se encuentra registrado.")
+    return inventario
+
+def disminuirProductoExistente(inventario):
+    print("Disminuir Existencias")
+    codigo = input("codigo : ")
+    pos = buscarProductoCodigo(inventario,codigo)
+    if(pos!=-1):
+        existencias = input("existencias : ")
+        inventario[pos][-1] = str(int(inventario[pos][-1])-int(existencias))
+    else:
+        print("El Producto no se encuentra registrado.")
+    return inventario
+
+def borrarProducto(inventario):
     return inventario

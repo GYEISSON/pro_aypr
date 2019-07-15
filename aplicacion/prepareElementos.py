@@ -1,7 +1,7 @@
 #los siguisntes modulos crearan todos elementos de la aplicacion
 
 def prepareElementos():
-    inventario = [["Codigo","Nombre","Descipcion","Contradicciones",
+    inventario = [["Codigo","Nombre","Descipcion","Contraindicaciones",
                   "Precio","Grupos","Requiere formulacion","Existencias"]]
     
     return inventario
@@ -39,7 +39,7 @@ def cargarDatos(ruta,inventario):
         dato = [codigo,nombre,descripcion,contradicciones,precio,grupos,requiereFormulacion,existencias]
         inventario.append(dato)
         line = archivo.readline()
-        
+    archivo.close()
     return inventario
         
     

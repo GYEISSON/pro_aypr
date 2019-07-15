@@ -42,4 +42,34 @@ def disminuirProductoExistente(inventario):
     return inventario
 
 def borrarProducto(inventario):
-    return inventario
+    codigo = input("Ingrese el codigo del elemento: ")
+    pos = buscarProductoCodigo(inventario,codigo)
+    if(pos!=-1):
+        inventario.remove(codigo)        
+    else:
+        print("El Producto no se encuentra registrado.")
+    
+def guardarDatos(inventario,ruta):
+    archivo = open(ruta,'w')
+    for i in range(len(inventario)):
+        for j in range(1,len(inventario[i])):
+            if(j==1):
+                archivo.write("Nombre : "+inventario[i][j]+"\n")
+            elif(j==2):
+                archivo.write("Descripcion : "+inventario[i][j]+"\n")
+            elif(j==3):
+                archivo.write("Contraindicaciones : "+inventario[i][j]+"\n")
+            elif(j==4):
+                archivo.write("Precio : "+inventario[i][j]+"\n")
+            elif(j==5):
+                archivo.write("Grupos : ")
+                for k in range(len(inventario[i][j])):
+                    if(k<len(inventario[i][j])-1):
+                        archivo.write(inventario[i][j][k]+",")
+                    else:
+                        archivo.write(inventario[i][j][k]+"\n")
+            elif(j==6):
+                archivo.write("requiereFormulacion(si | no): "+inventario[i][j]+'\n')
+            else:
+                archivo.write("Codigo : "+inventario[i][j]+"\n")
+        archivo.close()

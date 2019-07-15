@@ -18,8 +18,8 @@ def cargarDatos(ruta,inventario):
         if("Descripcion :" in line):
             descripcion = line[13:].strip()
             line = archivo.readline()
-        if("Contradicciones :" in line):
-            contradicciones = line[15:].strip()
+        if("Contraindicaciones :" in line):
+            contradicciones = line[21:].strip()
             line = archivo.readline()
         if("Precio :" in line):
             precio = line[8:].strip()
@@ -36,7 +36,8 @@ def cargarDatos(ruta,inventario):
         if("Codigo :" in line):
             codigo = line[8:].strip()
                  
-        dato = [codigo,nombre,descripcion,contradicciones,precio,grupos,requiereFormulacion,existencias]
+        dato = [codigo,nombre,descripcion,contradicciones,precio,grupos,requiereFormulacion,existencias,codigo]
+        print(dato)
         inventario.append(dato)
         line = archivo.readline()
     archivo.close()

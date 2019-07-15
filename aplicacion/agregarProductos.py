@@ -7,15 +7,12 @@ def agregarNuevoProducto(inventario):
     
     nombre = input("Nombre: ").replace(".","")
     descripcion = input("Descripcion: ").replace(".","")
-    contradicciones = input("Contradicciones: ").replace(".","")
-    precio = float(input("precio: "))
-    grupos = input("grupos(separados por (,)): ").replace(".","").split()
+    contraindicaciones = input("Contraindicaciones: ").replace(".","")
+    precio = input("precio: ")
+    grupos = input("grupos(separados por (,)): ").replace(".","").replace(","," ").split()
     requiereFormulacion = input("requiereFormulacion(si | no): ").replace(".","")
     codigo=input("Codigo: ")
-    if("si" in requiereFormulacion): requiereFormulacion = True
-    else: requiereFormulacion = False
-    
-    producto = [codigo,nombre,descripcion,contradicciones,precio,grupos,requiereFormulacion,1]
+    producto = [codigo,nombre,descripcion,contraindicaciones,precio,grupos,requiereFormulacion,1]
     inventario.append(producto)
     return inventario
 
@@ -51,8 +48,10 @@ def borrarProducto(inventario):
     
 def guardarDatos(inventario,ruta):
     archivo = open(ruta,'w')
-    for i in range(len(inventario)):
+    print(inventario)
+    for i in range(1,len(inventario)):
         for j in range(1,len(inventario[i])):
+            print(inventario[i][j],"DATO")
             if(j==1):
                 archivo.write("Nombre : "+inventario[i][j]+"\n")
             elif(j==2):
@@ -70,6 +69,6 @@ def guardarDatos(inventario,ruta):
                         archivo.write(inventario[i][j][k]+"\n")
             elif(j==6):
                 archivo.write("requiereFormulacion(si | no): "+inventario[i][j]+'\n')
-            else:
-                archivo.write("Codigo : "+inventario[i][j]+"\n")
-        archivo.close()
+        
+        archivo.write("Codigo : "+inventario[i][0]+"\n")        
+    archivo.close()

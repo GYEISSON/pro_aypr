@@ -16,14 +16,12 @@ def opcion2(inventario):
     opcion = menuConsultar()
     while(opcion!=6):
         if(opcion ==1):
-            codigo=input("ingrese el codigo del producto: ")
-            consultarProductoCodigo(inventario,codigo)
+            consultarProductoCodigo(inventario)
         elif(opcion==2):
-            nombre = input("ingrese el nombre del producto: ")
-            consultarProductoNombre(inventario, nombre)
+            consultarProductoNombre(inventario)
         elif(opcion==3):
-            categoria = input("ingrese la categoria del producto: ")
-            consultarProductoCategoria(inventario, categoria)
+            
+            consultarProductoCategoria(inventario)
         elif(opcion==4):
             opcion2Categoria(inventario)
         elif(opcion==5):
@@ -37,8 +35,8 @@ def opcion2Categoria(inventario):
         if(opcion==1):
             consultarProductosAgotados(inventario)
         elif(opcion ==2):
-            numero=int(input("productos con existencias mayores a: "))
-            consultarProductosN(numero,inventario)
+            
+            consultarProductosN(inventario)
         opcion = menuConsularExistencias()
 
 def opcion3(inventario):
@@ -64,9 +62,9 @@ def menu(inventario):
         elif(opcion==3):
             opcion = opcion3(inventario)
         elif(opcion==4):
-            continue
+            ruta='datos.txt'
+            guardarDatos(inventario,ruta)        
         opcion = menuInicial()
-    print(inventario)
     return menu
 
 def main():

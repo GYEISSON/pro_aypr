@@ -1,35 +1,8 @@
 Nombre : Dorex Suave
 Descripcion : Disminucion del dolor de muelas en segundos.
-Contradicciones : Mejor no consumir, solo duerma o tomese un te.
+Contraindicaciones : Mejor no consumir, solo duerma o tomese un te.
 Precio : 6999.99
 Grupos : Tabletas,Dientes,Paracetamol,farmaco.
-Requiere formulacion : si.
-Existencias : 15
+requiereFormulacion(si | no): si
 Codigo : 123
-Nombre : Dorex Fuerte
-Descripcion : Disminucion del dolor de muelas en micro segundos.
-Contradicciones : Mejor no consumir, solo duerma o tomese un te.
-Precio : 16999.99
-Grupos : Tabletas,Dientes,Paracetamol,farmaco.
-Requiere formulacion : si.
-Existencias : 5
-Codigo : 124
-Nombre : Copitos Ajacs
-Descripcion : Copitos para untar cosas.
-Contradicciones : No, repito, NO meterselo en la oreja.
-Precio : 1200
-Grupos : Utensilios,Esterilizados,Algodon.
-Requiere formulacion : no.
-Existencias : 300
-Codigo : 125
-Nombre : Curitas Ajacs
-Descripcion : Curas para tapar heridas.
-Contradicciones : Reemplazar despues de ba~narse.
-Precio : 3222
-Grupos : Utensilios,Esterilizados,Heridas.
-Requiere formulacion : no.
-Existencias : 0
-Codigo : 126
-
-
 

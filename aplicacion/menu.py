@@ -5,10 +5,11 @@
 def menuInicial():
     print("INVENTARIO GROGUERIA\n")
     print("1 Agregar productos")
-    print("2  Consultar productos" )
+    print("2 Consultar productos" )
     print("3 Editar productos")
-    print("4 Guardar en archivo")
-    print("5 Salir")
+    print("4 Borrar un producto por codigo de barras.")
+    print("5 Guardar en archivo")
+    print("6 Salir")
     num = int(input())
     return num
 

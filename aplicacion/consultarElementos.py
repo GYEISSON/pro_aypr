@@ -34,13 +34,17 @@ def consultarProductoNombre(inventario):
 
 def consultarProductoCategoria(inventario):
     categoria = input("ingrese la categoria del producto: ")
+    noExistenDatos=True
     for i in range(1,len(inventario)):
-        for j in range(len(inventario[i][5])):
-            
-            if(inventario[i][5][j]==categoria):        
+        for j in range(len(inventario[i][5])):            
+            if(inventario[i][5][j]==categoria):
+                noExistenDatos=False
                 for k in range(1,len(inventario[i])):
                     print(inventario[0][k]+" : ",inventario[i][k])
                 print()
+    if(noExistenDatos):
+        print("No existen datos para esta categoria.\n")
+                
 def consultarProductosAgotados(inventario):
     for i in range(1,len(inventario)):
         if(int(inventario[i][-1]) == 0):
@@ -57,7 +61,8 @@ def consultarProductosN(inventario):
             print()
 
 def consultarTodo(inventario):
+
     for i in range(1,len(inventario)):
         for k in range(1,len(inventario[i])):
-             print(inventario[0][k]+" : ",inventario[i][k])
+            print(inventario[0][k]+" : ",inventario[i][k])
         print()
